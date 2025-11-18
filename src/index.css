@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Retro-Tech Color Palette */
+    --periwinkle: 237 85% 76%;
+    --pastel-pink: 351 100% 86%;
+    --mint-green: 143 80% 75%;
+    --deep-indigo: 240 40% 20%;
+    --soft-white: 0 0% 98%;
+    
+    --background: var(--periwinkle);
+    --foreground: var(--deep-indigo);
+
+    --card: var(--soft-white);
+    --card-foreground: var(--deep-indigo);
+
+    --popover: var(--soft-white);
+    --popover-foreground: var(--deep-indigo);
+
+    --primary: var(--periwinkle);
+    --primary-foreground: var(--deep-indigo);
+
+    --secondary: var(--pastel-pink);
+    --secondary-foreground: var(--deep-indigo);
+
+    --muted: 240 10% 95%;
+    --muted-foreground: 240 20% 50%;
+
+    --accent: var(--mint-green);
+    --accent-foreground: var(--deep-indigo);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 20% 85%;
+    --input: 240 10% 95%;
+    --ring: var(--periwinkle);
+
+    --radius: 1.25rem;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--periwinkle)), hsl(240 80% 80%));
+    --shadow-glow: 0 8px 32px hsl(var(--periwinkle) / 0.3);
+    --shadow-float: 0 12px 40px hsl(var(--mint-green) / 0.25);
+  }
+
+  .dark {
+    --background: 240 30% 12%;
+    --foreground: var(--soft-white);
+
+    --card: 240 25% 15%;
+    --card-foreground: var(--soft-white);
+
+    --popover: 240 25% 15%;
+    --popover-foreground: var(--soft-white);
+
+    --primary: var(--periwinkle);
+    --primary-foreground: var(--deep-indigo);
+
+    --secondary: 240 20% 20%;
+    --secondary-foreground: var(--soft-white);
+
+    --muted: 240 20% 20%;
+    --muted-foreground: 240 10% 70%;
+
+    --accent: var(--mint-green);
+    --accent-foreground: var(--deep-indigo);
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 20% 25%;
+    --input: 240 20% 25%;
+    --ring: var(--periwinkle);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-retro;
+  }
+}
+
+@layer utilities {
+  .retro-shadow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .float-shadow {
+    box-shadow: var(--shadow-float);
+  }
+}
