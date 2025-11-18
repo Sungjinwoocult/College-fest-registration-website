@@ -8,4 +8,5 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
- this is my baby guys, thank you.
+
+*this is my baby guys, thank you.
